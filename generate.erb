@@ -4,22 +4,20 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
 </head>
 <body>
-	<table class="table">
-		<thead>
-			<tr>
-				<% for question in questions %>
-				<th><%= question %></th>
-				<% end %>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<th scope="row">1</th>
-				<td>Mark</td>
-				<td>Otto</td>
-				<td>@mdo</td>
-			</tr>
-		</tbody>
-	</table>
+
+<div class="container">
+<% for response in responses %>
+	<div class="border">
+		<% for question,answer in response %>
+		<div class="row">
+			<div class="col"><p class="text-secondary"><%= question.to_s %></p></div>
+			<div class="col"><p><%= answer.to_s %></p></div>
+		</div>
+		<% end %>
+	</div>
+	<h1 class="display-1"></h1>
+<% end %>
+</div>
+
 </body>
 </html>
