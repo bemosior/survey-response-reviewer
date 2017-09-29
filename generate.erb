@@ -9,13 +9,11 @@
 <% for response in responses %>
 	<div class="border">
 		<% for question,answer in response %>
-		<div class="row">
-			<div class="col"><p class="text-secondary"><%= question.to_s %></p></div>
-			<div class="col"><p><%= answer.to_s %></p></div>
-		</div>
+		<p>
+		<span class="text-secondary"><%= question.to_s %></span><br/>
+		<%= answer.to_s %>
 		<% end %>
 	</div>
-	<h1 class="display-1"></h1>
 <% end %>
 </div>
 
