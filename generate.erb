@@ -2,12 +2,18 @@
 <html>
 <head>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+
+	<style>
+	  .respondent {
+			page-break-after: always;
+		}
+	</style>
 </head>
 <body>
 
 <div class="container">
 <% for response in responses %>
-	<div class="border border-dark p-3">
+	<div class="respondent border border-dark p-3">
 		<% for question,answer in response %>
 		<p>
 		<span class="text-secondary"><%= question.to_s %></span><br/>
